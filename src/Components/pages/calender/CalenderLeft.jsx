@@ -11,11 +11,14 @@ const CalenderLeft = () => {
     }
     const currentDate = dayjs();
     const [today, setToday] = useState(currentDate);
+
+    const [time, setTime] = useState(currentDate);
+
     
 
     return (
         <div className='p-6'>
-            <h2 className='font-medium text-xl mb-7'>Select a Date & Time</h2>
+            <h2 className='font-medium text-xl mb-7 text-center md:text-left'>Select a Date & Time</h2>
             <div className='flex items-center justify-between'>
                 <h2 className='mb-4'>{months[today.month()]}</h2>
                 <div className='flex mb-4'>
@@ -53,7 +56,7 @@ const CalenderLeft = () => {
                 <p className='font-medium'>Time zone</p>
                 <div className='w-[80%] h-7 flex items-center rounded-xl pl-2 hover:bg-gray-200'>
                     <p className='pr-3'><BiWorld/></p>
-                    <p className=' cursor-pointer'>Asia/Dhaka (6:34pm)</p>
+                    <p className=' cursor-pointer'>Asia/Dhaka ({time.hour()}:{time.minute()})</p>
                    <span className='text-sm'><AiFillCaretDown/></span>
                 </div>
             </div>
