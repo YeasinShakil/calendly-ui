@@ -1,11 +1,18 @@
 import React from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { AiFillClockCircle } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const CalenderRight = () => {
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1)
+    }
+
     return (
         <div className='p-6 flex flex-col'>
-            <div className=' w-10 h-10 rounded-full border flex justify-center items-center text-2xl text-blue-500 cursor-pointer hover:bg-blue-200'>
+            <div className=' w-10 h-10 rounded-full border flex justify-center items-center text-2xl text-blue-500 cursor-pointer hover:bg-blue-200' onClick={goBack}>
                 <AiOutlineArrowLeft className=' font-bold' />
             </div>
             <p className='mt-10 font-medium text-gray-400 text-center lg:text-left '>Bitbytesoft Oy</p>
