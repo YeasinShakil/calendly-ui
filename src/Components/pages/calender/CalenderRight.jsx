@@ -21,7 +21,7 @@ const CalenderRight = () => {
                 <AiFillClockCircle />
                 <p className=' ml-2 font-medium'>30 min</p>
             </div>
-            <div className='cursor-pointer absolute sm:bottom-4 sm:left-5 left-[35%] bottom-[-15px] text-center right-50'>
+            <div className='cursor-pointer absolute sm:bottom-4 sm:left-5 left-[35%] bottom-[-30px] text-center right-50'>
                 <p className=' text-blue-500'>Cookie settings</p>
             </div>
         </div>
